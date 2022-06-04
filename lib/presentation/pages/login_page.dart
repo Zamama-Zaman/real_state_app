@@ -2,10 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:real_state_app/constants.dart';
-import 'package:real_state_app/presentation/pages/home_page_dummy.dart';
+import 'package:real_state_app/presentation/pages/home_page.dart';
+import 'package:real_state_app/presentation/pages/properties_page.dart';
 import 'package:real_state_app/presentation/pages/registration_page.dart';
-
-import 'home/home_screen.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -88,12 +87,12 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
-                      ),
-                    );
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PropertiesPage(),
+                        ),
+                        (route) => false);
                   },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),

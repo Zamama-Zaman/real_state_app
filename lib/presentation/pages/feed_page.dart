@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class DetailPageSecond extends StatelessWidget {
-  const DetailPageSecond({Key? key}) : super(key: key);
+class FeedPage extends StatelessWidget {
+  const FeedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("I Will Rule The World!"),
+        child: Text("Feed Page"),
       ),
     );
   }
