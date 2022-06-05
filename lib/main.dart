@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_app/presentation/pages/activity_page.dart';
 import 'package:real_state_app/presentation/pages/login_page.dart';
+import 'package:real_state_app/presentation/pages/properties_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const ActivityPage(),
+      home: const PropertiesPage(),
     );
   }
 }
