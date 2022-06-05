@@ -11,3 +11,5 @@ const Color darkBlue = Color(0xFFA3CE58);
 
 //default app padding
 const double appPadding = 30.0;
+
+const TWO_PI = 3.14 * 2;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_app/presentation/pages/activity_page.dart';
+import 'package:real_state_app/presentation/pages/guide_profile_page.dart';
 import 'package:real_state_app/presentation/pages/login_page.dart';
 import 'package:real_state_app/presentation/pages/properties_page.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const PropertiesPage(),
+      home: const GuideProfilePage(),
     );
   }
 }

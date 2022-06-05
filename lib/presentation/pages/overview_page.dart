@@ -25,7 +25,7 @@ class OverviewPage extends StatefulWidget {
 }
 
 class _OverviewPageState extends State<OverviewPage> {
-  var rating = 0.0;
+  var rating = 5.0;
   double sliderValue = 0.0;
   int item = 0;
   @override
