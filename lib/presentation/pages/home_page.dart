@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:real_state_app/presentation/pages/overview_page.dart';
 import 'package:real_state_app/presentation/pages/project_page.dart';
 import 'package:real_state_app/presentation/pages/update_page.dart';
+import 'package:real_state_app/presentation/widgets/drawer_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -37,6 +38,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: drawerWidget(context),
       appBar: AppBar(
         title: Text("Dashboard"),
         bottom: TabBar(
@@ -46,10 +48,6 @@ class _HomePageState extends State<HomePage>
           },
           controller: _controller,
           tabs: list,
-        ),
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu),
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
