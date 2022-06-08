@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:real_state_app/constants.dart';
-import 'package:real_state_app/presentation/pages/home_page.dart';
+import 'package:real_state_app/presentation/pages/dashboard_page.dart';
 import 'package:real_state_app/presentation/pages/properties_page.dart';
 import 'package:real_state_app/presentation/pages/registration_page.dart';
 

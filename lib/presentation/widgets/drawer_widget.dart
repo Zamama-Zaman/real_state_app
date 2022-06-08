@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:real_state_app/constants.dart';
 import 'package:real_state_app/presentation/pages/documents_page.dart';
 import 'package:real_state_app/presentation/pages/gallery_page.dart';
-import 'package:real_state_app/presentation/pages/home_page.dart';
+import 'package:real_state_app/presentation/pages/dashboard_page.dart';
 import 'package:real_state_app/presentation/pages/map_page.dart';
 import 'package:real_state_app/presentation/pages/plans_page.dart';
 
@@ -131,7 +131,7 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
           Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => HomePage(),
+                builder: (context) => Dashboard(),
               ),
               (route) => false);
           // Navigator.push(

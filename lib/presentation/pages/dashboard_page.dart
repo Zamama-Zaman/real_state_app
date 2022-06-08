@@ -1,19 +1,19 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:real_state_app/presentation/pages/ending_soon_page.dart';
-import 'package:real_state_app/presentation/pages/popular_page.dart';
-import "package:real_state_app/presentation/pages/what's_new_page.dart";
+import 'package:real_state_app/presentation/pages/overview_page.dart';
+import 'package:real_state_app/presentation/pages/project_page.dart';
+import 'package:real_state_app/presentation/pages/update_page.dart';
 import 'package:real_state_app/presentation/widgets/drawer_widget.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class Dashboard extends StatefulWidget {
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Dashboard> createState() => _DashboardState();
 }
 
-class _HomePageState extends State<HomePage>
+class _DashboardState extends State<Dashboard>
     with SingleTickerProviderStateMixin {
   late TabController _controller;
   int _selectedIndex = 0;
@@ -31,9 +31,9 @@ class _HomePageState extends State<HomePage>
   }
 
   List<Widget> list = [
-    Tab(text: "WHAT'S NEW"),
-    Tab(text: "POPULAR"),
-    Tab(text: "ENDING SOON"),
+    Tab(text: "OVERVIEW"),
+    Tab(text: "PROJECT"),
+    Tab(text: "UPDATE"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -57,9 +57,9 @@ class _HomePageState extends State<HomePage>
       body: TabBarView(
         controller: _controller,
         children: [
-          WhatsNewPage(),
-          PopularPage(),
-          EndingSoon(),
+          OverviewPage(),
+          ProjectPage(),
+          UpdatePage(),
         ],
       ),
     );
