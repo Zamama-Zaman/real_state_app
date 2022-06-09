@@ -2,14 +2,16 @@
 
 import 'package:flutter/material.dart';
 import 'package:real_state_app/constants.dart';
+import 'package:real_state_app/presentation/pages/campaign_page.dart';
 import 'package:real_state_app/presentation/pages/documents_page.dart';
 import 'package:real_state_app/presentation/pages/gallery_page.dart';
 import 'package:real_state_app/presentation/pages/dashboard_page.dart';
+import 'package:real_state_app/presentation/pages/home_page.dart';
 import 'package:real_state_app/presentation/pages/map_page.dart';
 import 'package:real_state_app/presentation/pages/plans_page.dart';
 
 Drawer drawerWidget(context) {
-  var currentPage = DrawerSection.plans;
+  var currentPage = DrawerSection.compaign;
   return Drawer(
     child: SingleChildScrollView(
       child: Column(
@@ -66,43 +68,43 @@ Widget drawerList(context, currentPage) {
       menuItem(
         context,
         1,
-        'Map',
+        'Home',
         Icons.home,
-        currentPage == DrawerSection.map ? true : false,
+        currentPage == DrawerSection.compaign ? true : false,
         currentPage,
       ),
       menuItem(
         context,
         2,
-        'Home',
-        Icons.person,
+        'Compaign',
+        Icons.dashboard,
         currentPage == DrawerSection.home ? true : false,
         currentPage,
       ),
-      menuItem(
-        context,
-        3,
-        'Gallery',
-        Icons.money,
-        currentPage == DrawerSection.gallery ? true : false,
-        currentPage,
-      ),
-      menuItem(
-        context,
-        4,
-        'Plans',
-        Icons.send,
-        currentPage == DrawerSection.plans ? true : false,
-        currentPage,
-      ),
-      menuItem(
-        context,
-        5,
-        'Documents',
-        Icons.card_membership_sharp,
-        currentPage == DrawerSection.documents ? true : false,
-        currentPage,
-      ),
+      // menuItem(
+      //   context,
+      //   3,
+      //   'Gallery',
+      //   Icons.money,
+      //   currentPage == DrawerSection.gallery ? true : false,
+      //   currentPage,
+      // ),
+      // menuItem(
+      //   context,
+      //   4,
+      //   'Plans',
+      //   Icons.send,
+      //   currentPage == DrawerSection.plans ? true : false,
+      //   currentPage,
+      // ),
+      // menuItem(
+      //   context,
+      //   5,
+      //   'Documents',
+      //   Icons.card_membership_sharp,
+      //   currentPage == DrawerSection.documents ? true : false,
+      //   currentPage,
+      // ),
     ],
   );
 }
@@ -113,11 +115,11 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
     child: InkWell(
       onTap: () {
         if (id == 1) {
-          currentPage = DrawerSection.map;
+          currentPage = DrawerSection.home;
           Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => MapPage(),
+                builder: (context) => HomePage(),
               ),
               (route) => false);
           // Navigator.push(
@@ -127,11 +129,11 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
           //   ),
           // );
         } else if (id == 2) {
-          currentPage = DrawerSection.home;
+          currentPage = DrawerSection.compaign;
           Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => Dashboard(),
+                builder: (context) => CompaignPage(),
               ),
               (route) => false);
           // Navigator.push(
@@ -140,111 +142,112 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
           //     builder: (context) => ProfilePage(),
           //   ),
           // );
-        } else if (id == 3) {
-          currentPage = DrawerSection.gallery;
-          Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (context) => GalleryPage(),
-              ),
-              (route) => false);
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => AddMoneyPage(),
-          //   ),
-          // );
-        } else if (id == 4) {
-          currentPage = DrawerSection.plans;
-          Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (context) => PlansPage(),
-              ),
-              (route) => false);
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => SendMoneyPageOne(),
-          //   ),
-          // );
-        } else if (id == 5) {
-          currentPage = DrawerSection.documents;
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => BuyGiftCard(),
-          //     ),
-          //     (route) => false);
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => DocumentsPage(),
-            ),
-          );
-        } else if (id == 6) {
-          // currentPage = DrawerSection.createAVirtualCard;
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => VirtualCardPage(),
-          //     ),
-          //     (route) => false);
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => VirtualCardPage(),
-          //   ),
-          // );
         }
-        // else if (id == 7) {
-        //   currentPage = DrawerSection.transactions;
+        //else if (id == 3) {
+        //   currentPage = DrawerSection.gallery;
+        //   Navigator.pushAndRemoveUntil(
+        //       context,
+        //       MaterialPageRoute(
+        //         builder: (context) => GalleryPage(),
+        //       ),
+        //       (route) => false);
+        //   // Navigator.push(
+        //   //   context,
+        //   //   MaterialPageRoute(
+        //   //     builder: (context) => AddMoneyPage(),
+        //   //   ),
+        //   // );
+        // } else if (id == 4) {
+        //   currentPage = DrawerSection.plans;
+        //   Navigator.pushAndRemoveUntil(
+        //       context,
+        //       MaterialPageRoute(
+        //         builder: (context) => PlansPage(),
+        //       ),
+        //       (route) => false);
+        //   // Navigator.push(
+        //   //   context,
+        //   //   MaterialPageRoute(
+        //   //     builder: (context) => SendMoneyPageOne(),
+        //   //   ),
+        //   // );
+        // } else if (id == 5) {
+        //   currentPage = DrawerSection.documents;
+        //   // Navigator.pushAndRemoveUntil(
+        //   //     context,
+        //   //     MaterialPageRoute(
+        //   //       builder: (context) => BuyGiftCard(),
+        //   //     ),
+        //   //     (route) => false);
+        //   Navigator.push(
+        //     context,
+        //     MaterialPageRoute(
+        //       builder: (context) => DocumentsPage(),
+        //     ),
+        //   );
+        // } else if (id == 6) {
+        //   // currentPage = DrawerSection.createAVirtualCard;
+        //   // Navigator.pushAndRemoveUntil(
+        //   //     context,
+        //   //     MaterialPageRoute(
+        //   //       builder: (context) => VirtualCardPage(),
+        //   //     ),
+        //   //     (route) => false);
+        //   // Navigator.push(
+        //   //   context,
+        //   //   MaterialPageRoute(
+        //   //     builder: (context) => VirtualCardPage(),
+        //   //   ),
+        //   // );
         // }
-        else if (id == 8) {
-          // currentPage = DrawerSection.settings;
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => SettingPageOne(),
-          //     ),
-          //     (route) => false);
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => SettingPageOne(),
-          //   ),
-          // );
-        } else if (id == 9) {
-          // currentPage = DrawerSection.supportCentre;
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => SupportCentrePageOne(),
-          //     ),
-          //     (route) => false);
+        // // else if (id == 7) {
+        // //   currentPage = DrawerSection.transactions;
+        // // }
+        // else if (id == 8) {
+        //   // currentPage = DrawerSection.settings;
+        //   // Navigator.pushAndRemoveUntil(
+        //   //     context,
+        //   //     MaterialPageRoute(
+        //   //       builder: (context) => SettingPageOne(),
+        //   //     ),
+        //   //     (route) => false);
+        //   // Navigator.push(
+        //   //   context,
+        //   //   MaterialPageRoute(
+        //   //     builder: (context) => SettingPageOne(),
+        //   //   ),
+        //   // );
+        // } else if (id == 9) {
+        //   // currentPage = DrawerSection.supportCentre;
+        //   // Navigator.pushAndRemoveUntil(
+        //   //     context,
+        //   //     MaterialPageRoute(
+        //   //       builder: (context) => SupportCentrePageOne(),
+        //   //     ),
+        //   //     (route) => false);
 
-          //* uncomment this
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => SupportCentrePageOne(),
-          //   ),
-          // );
-        } else if (id == 10) {
-          // currentPage = DrawerSection.signOut;
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => VirtualCardPageThird(),
-          //     ),
-          //     (route) => false);
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => VirtualCardPageThird(),
-          //   ),
-          // );
-        }
+        //   //* uncomment this
+        //   // Navigator.push(
+        //   //   context,
+        //   //   MaterialPageRoute(
+        //   //     builder: (context) => SupportCentrePageOne(),
+        //   //   ),
+        //   // );
+        // } else if (id == 10) {
+        //   // currentPage = DrawerSection.signOut;
+        //   // Navigator.pushAndRemoveUntil(
+        //   //     context,
+        //   //     MaterialPageRoute(
+        //   //       builder: (context) => VirtualCardPageThird(),
+        //   //     ),
+        //   //     (route) => false);
+        //   // Navigator.push(
+        //   //   context,
+        //   //   MaterialPageRoute(
+        //   //     builder: (context) => VirtualCardPageThird(),
+        //   //   ),
+        //   // );
+        // }
       },
       child: Padding(
         padding: EdgeInsets.all(15.0),
@@ -275,9 +278,10 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
 }
 
 enum DrawerSection {
-  map,
+  // map,
   home,
-  gallery,
-  plans,
-  documents,
+  compaign,
+  // gallery,
+  // plans,
+  // documents,
 }

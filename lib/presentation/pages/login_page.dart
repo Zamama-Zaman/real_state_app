@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_app/constants.dart';
 import 'package:real_state_app/presentation/pages/dashboard_page.dart';
+import 'package:real_state_app/presentation/pages/home_page.dart';
 import 'package:real_state_app/presentation/pages/properties_page.dart';
 import 'package:real_state_app/presentation/pages/registration_page.dart';
 
@@ -90,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PropertiesPage(),
+                          builder: (context) => HomePage(),
                         ),
                         (route) => false);
                   },

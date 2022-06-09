@@ -13,9 +13,8 @@ class TwoText {
 }
 
 List<TwoText> twoText = [
-  TwoText(number: "359", name: "Photos"),
-  TwoText(number: "10,289", name: "Followers"),
-  TwoText(number: "4317", name: "Followings"),
+  TwoText(number: "REGULAR\nINCOME PLAN", name: ""),
+  TwoText(number: "CAPITAL\nINCOME PLAN", name: ""),
 ];
 
 class OverviewPage extends StatefulWidget {
@@ -464,154 +463,7 @@ class _OverviewPageState extends State<OverviewPage> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
             SizedBox(height: 20),
-            Container(
-              height: 105,
-              margin: EdgeInsets.symmetric(horizontal: 20),
-              color: Colors.transparent,
-              child: ListView.builder(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  if (index == 0) {
-                    return Container(
-                      height: 105,
-                      width: 80,
-                      margin: EdgeInsets.only(right: 30),
-                      color: Colors.transparent,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 55,
-                            width: 55,
-                            decoration: BoxDecoration(
-                              color: Constant.kGreenColor,
-                              borderRadius: BorderRadius.circular(50),
-                            ),
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.white,
-                              size: 30,
-                            ),
-                          ),
-                          Text(
-                            "Researh\n Report",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }
-                  return Container(
-                    height: 105,
-                    width: 80,
-                    margin: EdgeInsets.only(right: 30),
-                    color: Colors.transparent,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 55,
-                          width: 55,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
-                        Text(
-                          "Recipient\n Name",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-              // Row(
-              //   children: [
-              //     Container(
-              //       height: 105,
-              //       width: 80,
-              //       margin: EdgeInsets.only(right: 10),
-              //       color: Colors.red,
-              //       child: Column(
-              //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //         children: [
-              //           Container(
-              //             height: 55,
-              //             width: 55,
-              //             decoration: BoxDecoration(
-              //               color: Colors.blue,
-              //               borderRadius: BorderRadius.circular(50),
-              //             ),
-              //           ),
-              //           Text(
-              //             "Researh\n Report",
-              //             style: TextStyle(
-              //               color: Colors.grey.shade300,
-              //               fontSize: 16,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ],
-              // ),
-            ),
-            SizedBox(height: 40),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                "ABOUT ME",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              alignment: Alignment.bottomLeft,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Weasel maternal dove far the jeepers goodness",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 14,
-                    ),
-                  ),
-                  Text(
-                    "inconsiderately spelled so ubiquitous amused",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 14,
-                    ),
-                  ),
-                  Text(
-                    "knitted and altriuistic amiable far much toward.",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 14,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 10),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               alignment: Alignment.bottomLeft,
@@ -754,6 +606,19 @@ class _OverviewPageState extends State<OverviewPage> {
                 ],
               ),
             ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                "INVESTMENT PLANS",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
             SizedBox(height: 30),
             Container(
               height: 70,
@@ -763,7 +628,7 @@ class _OverviewPageState extends State<OverviewPage> {
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: twoText.length,
-                itemBuilder: (context, index) => InkWell(
+                itemBuilder: (context, index) => GestureDetector(
                   onTap: () {
                     setState(() {
                       item = index;
@@ -771,25 +636,21 @@ class _OverviewPageState extends State<OverviewPage> {
                   },
                   child: Container(
                     height: 70,
-                    width: 124,
+                    width: 150,
+                    margin: EdgeInsets.only(right: 30),
                     color: Colors.transparent,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(height: 5),
                         Text(
                           twoText[index].number,
                           style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w900,
                           ),
                         ),
-                        Text(
-                          twoText[index].name,
-                          style: TextStyle(
-                            fontSize: 14,
-                          ),
-                        ),
-                        Expanded(child: SizedBox()),
+                        Spacer(),
                         item == index
                             ? Container(
                                 height: 3,
@@ -807,12 +668,23 @@ class _OverviewPageState extends State<OverviewPage> {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               alignment: Alignment.bottomLeft,
-              child: Text(
-                "ABOUT ME",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                ),
+              child: Row(
+                children: [
+                  Text(
+                    "\$150",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    " / Square Feet",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 10),
@@ -1119,9 +991,367 @@ class _OverviewPageState extends State<OverviewPage> {
                 ],
               ),
             ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                "RETURN CALCULATOR",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 5, right: 10),
+                        height: 10,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          color: Constant.kGreenColor,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      Text(
+                        "By Squre Feet",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.grey.shade700,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 5, right: 10),
+                        height: 10,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      Text(
+                        "By Target Amount",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.grey.shade700,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
             SizedBox(height: 40),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              height: 50,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Purchasing Squre Feet",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        "-\$20,00",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    "Enter Number of Sq. Ft.",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              height: 50,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Price per Squre Feet",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        "+\$55,00",
+                        style: TextStyle(
+                          color: Constant.kGreenColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    "Select Investment Plan",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              height: 50,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Payout on meturity",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        "+\$125,00",
+                        style: TextStyle(
+                          color: Constant.kGreenColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    "Withdarw of investment returns",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              height: 50,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Re invest payout in systemetic plan",
+                    style: TextStyle(
+                      color: black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Text(
+                    "No/Yes",
+                    style: TextStyle(
+                      color: black,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: 30,
+                vertical: 20,
+              ),
+              height: 100,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Invested",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          "\$225",
+                          style: TextStyle(
+                            color: Constant.kGreenColor,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  VerticalDivider(
+                    thickness: 2,
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Profit",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          "\$10",
+                          style: TextStyle(
+                            color: Constant.kGreenColor,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  VerticalDivider(
+                    thickness: 2,
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Current Value",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          "\$235",
+                          style: TextStyle(
+                            color: Constant.kGreenColor,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: 30,
+                vertical: 20,
+              ),
+              height: 75,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Column(
+                children: [
+                  Text(
+                    "on maturity, the amount gets automatically credited",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Text(
+                    "to get register back account",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: 30,
+                vertical: 20,
+              ),
+              height: 75,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Row(
+                children: [
+                  Text(
+                    "FREQUENTLY ASKED QUESTION",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.arrow_forward,
+                    color: Constant.kGreenColor,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
               width: double.infinity,
               height: 50,
               alignment: Alignment.center,
@@ -1129,70 +1359,88 @@ class _OverviewPageState extends State<OverviewPage> {
                 color: Constant.kGreenColor,
               ),
               child: Text(
-                "BOOK THIS TRIP NOW",
+                "INVEST NOW IN THIS PROJECTS",
                 style: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 18,
+                  // fontWeight: FontWeight.w700,
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              alignment: Alignment.bottomLeft,
-              child: Text(
-                "RELATED PRODUCTS",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0),
-              child: SizedBox(
-                height: 220,
-                width: double.infinity,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemCount: 2,
-                  itemBuilder: (context, index) => Container(
-                    margin: EdgeInsets.only(left: 10),
-                    width: 180,
-                    color: Colors.white,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 170,
-                          width: double.infinity,
-                          color: Colors.grey,
-                        ),
-                        SizedBox(height: 5),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: Text("Product Name"),
-                        ),
-                        SizedBox(height: 5),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                          child: Text(
-                            "\$255",
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Constant.kGreenColor,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
+            // SizedBox(height: 40),
+            // Container(
+            //   margin: EdgeInsets.symmetric(horizontal: 20),
+            //   width: double.infinity,
+            //   height: 50,
+            //   alignment: Alignment.center,
+            //   decoration: BoxDecoration(
+            //     color: Constant.kGreenColor,
+            //   ),
+            //   child: Text(
+            //     "BOOK THIS TRIP NOW",
+            //     style: TextStyle(
+            //       color: Colors.white,
+            //       fontWeight: FontWeight.w700,
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(height: 10),
+            // Container(
+            //   padding: EdgeInsets.symmetric(horizontal: 20),
+            //   alignment: Alignment.bottomLeft,
+            //   child: Text(
+            //     "RELATED PRODUCTS",
+            //     style: TextStyle(
+            //       fontSize: 16,
+            //       fontWeight: FontWeight.w700,
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(height: 10),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 10.0),
+            //   child: SizedBox(
+            //     height: 220,
+            //     width: double.infinity,
+            //     child: ListView.builder(
+            //       scrollDirection: Axis.horizontal,
+            //       shrinkWrap: true,
+            //       itemCount: 2,
+            //       itemBuilder: (context, index) => Container(
+            //         margin: EdgeInsets.only(left: 10),
+            //         width: 180,
+            //         color: Colors.white,
+            //         child: Column(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           children: [
+            //             Container(
+            //               height: 170,
+            //               width: double.infinity,
+            //               color: Colors.grey,
+            //             ),
+            //             SizedBox(height: 5),
+            //             Padding(
+            //               padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            //               child: Text("Product Name"),
+            //             ),
+            //             SizedBox(height: 5),
+            //             Padding(
+            //               padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            //               child: Text(
+            //                 "\$255",
+            //                 style: TextStyle(
+            //                   fontSize: 12,
+            //                   color: Constant.kGreenColor,
+            //                 ),
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(height: 10),
           ],
         ),
       ),

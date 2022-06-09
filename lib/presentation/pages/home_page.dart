@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       drawer: drawerWidget(context),
       appBar: AppBar(
-        title: Text("Dashboard"),
+        title: Text("Home"),
         bottom: TabBar(
           onTap: (index) {
             // Should not used it as it only called when tab options are clicked,

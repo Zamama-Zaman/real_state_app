@@ -40,7 +40,7 @@ class _CompaignPageState extends State<CompaignPage>
     return Scaffold(
       drawer: drawerWidget(context),
       appBar: AppBar(
-        title: Text("Dashboard"),
+        title: Text("Compaign"),
         bottom: TabBar(
           onTap: (index) {
             // Should not used it as it only called when tab options are clicked,
