@@ -48,6 +48,7 @@ class _CompaignPageState extends State<CompaignPage>
           },
           controller: _controller,
           tabs: list,
+          indicatorColor: Colors.white,
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),

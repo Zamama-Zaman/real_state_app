@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage>
           },
           controller: _controller,
           tabs: list,
+          indicatorColor: Colors.white,
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),

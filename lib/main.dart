@@ -1,7 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:real_state_app/constants.dart';
 import 'package:real_state_app/presentation/pages/activity_page.dart';
 import 'package:real_state_app/presentation/pages/campaign_page.dart';
 import 'package:real_state_app/presentation/pages/documents_page.dart';
+import 'package:real_state_app/presentation/pages/faq_page.dart';
 import 'package:real_state_app/presentation/pages/favorited_page.dart';
 import 'package:real_state_app/presentation/pages/gallery_page.dart';
 import 'package:real_state_app/presentation/pages/guide_profile_page.dart';
@@ -27,8 +31,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
+        appBarTheme: const AppBarTheme(
+          color: black,
+        ),
       ),
-      home: const LoginPage(),
+      home: const FAQPage(),
     );
   }
 }

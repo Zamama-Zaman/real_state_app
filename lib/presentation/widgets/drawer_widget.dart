@@ -81,30 +81,63 @@ Widget drawerList(context, currentPage) {
         currentPage == DrawerSection.home ? true : false,
         currentPage,
       ),
-      // menuItem(
-      //   context,
-      //   3,
-      //   'Gallery',
-      //   Icons.money,
-      //   currentPage == DrawerSection.gallery ? true : false,
-      //   currentPage,
-      // ),
-      // menuItem(
-      //   context,
-      //   4,
-      //   'Plans',
-      //   Icons.send,
-      //   currentPage == DrawerSection.plans ? true : false,
-      //   currentPage,
-      // ),
-      // menuItem(
-      //   context,
-      //   5,
-      //   'Documents',
-      //   Icons.card_membership_sharp,
-      //   currentPage == DrawerSection.documents ? true : false,
-      //   currentPage,
-      // ),
+      menuItem(
+        context,
+        3,
+        'Map',
+        Icons.map,
+        currentPage == DrawerSection.map ? true : false,
+        currentPage,
+      ),
+      menuItem(
+        context,
+        4,
+        'My Places',
+        Icons.place,
+        currentPage == DrawerSection.myPlaces ? true : false,
+        currentPage,
+      ),
+      menuItem(
+        context,
+        5,
+        'Traffic',
+        Icons.traffic,
+        currentPage == DrawerSection.traffic ? true : false,
+        currentPage,
+      ),
+      Divider(),
+      menuItem(
+        context,
+        6,
+        'Routes',
+        Icons.location_on_rounded,
+        currentPage == DrawerSection.routes ? true : false,
+        currentPage,
+      ),
+      menuItem(
+        context,
+        7,
+        'Settings',
+        Icons.settings,
+        currentPage == DrawerSection.settings ? true : false,
+        currentPage,
+      ),
+      menuItem(
+        context,
+        8,
+        'Help',
+        Icons.help,
+        currentPage == DrawerSection.help ? true : false,
+        currentPage,
+      ),
+      menuItem(
+        context,
+        9,
+        'Send Feedback',
+        Icons.send,
+        currentPage == DrawerSection.sendFeedback ? true : false,
+        currentPage,
+      ),
     ],
   );
 }
@@ -142,35 +175,35 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
           //     builder: (context) => ProfilePage(),
           //   ),
           // );
+        } else if (id == 3) {
+          currentPage = DrawerSection.map;
+          Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(
+                builder: (context) => MapPage(),
+              ),
+              (route) => false);
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder: (context) => AddMoneyPage(),
+          //   ),
+          // );
         }
-        //else if (id == 3) {
-        //   currentPage = DrawerSection.gallery;
+        // else if (id == 4) {
+        //   currentPage = DrawerSection.myPlaces;
         //   Navigator.pushAndRemoveUntil(
         //       context,
         //       MaterialPageRoute(
-        //         builder: (context) => GalleryPage(),
+        //         builder: (context) => MyPlace(),
         //       ),
         //       (route) => false);
-        //   // Navigator.push(
-        //   //   context,
-        //   //   MaterialPageRoute(
-        //   //     builder: (context) => AddMoneyPage(),
-        //   //   ),
-        //   // );
-        // } else if (id == 4) {
-        //   currentPage = DrawerSection.plans;
-        //   Navigator.pushAndRemoveUntil(
-        //       context,
-        //       MaterialPageRoute(
-        //         builder: (context) => PlansPage(),
-        //       ),
-        //       (route) => false);
-        //   // Navigator.push(
-        //   //   context,
-        //   //   MaterialPageRoute(
-        //   //     builder: (context) => SendMoneyPageOne(),
-        //   //   ),
-        //   // );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => SendMoneyPageOne(),
+        //   ),
+        // );
         // } else if (id == 5) {
         //   currentPage = DrawerSection.documents;
         //   // Navigator.pushAndRemoveUntil(
@@ -278,10 +311,13 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
 }
 
 enum DrawerSection {
-  // map,
   home,
   compaign,
-  // gallery,
-  // plans,
-  // documents,
+  map,
+  myPlaces,
+  traffic,
+  routes,
+  settings,
+  help,
+  sendFeedback
 }

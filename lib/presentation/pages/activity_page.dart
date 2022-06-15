@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:real_state_app/presentation/pages/feed_page.dart';
 import 'package:real_state_app/presentation/pages/notification_page.dart';
 
+import '../../constants.dart';
+
 class ActivityPage extends StatefulWidget {
   const ActivityPage({Key? key}) : super(key: key);
 
@@ -28,7 +30,7 @@ class _ActivityPageState extends State<ActivityPage>
     });
   }
 
-  List<Widget> list = [
+  List<Tab> list = [
     Tab(text: "FEED"),
     Tab(text: "NOTIFCATIONS"),
   ];
@@ -36,11 +38,13 @@ class _ActivityPageState extends State<ActivityPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: black,
         title: Text("Activity"),
         bottom: TabBar(
           onTap: (index) {},
           controller: _controller,
           tabs: list,
+          indicatorColor: Colors.white,
         ),
         leading: IconButton(
           onPressed: () {},
