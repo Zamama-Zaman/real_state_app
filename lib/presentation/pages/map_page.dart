@@ -60,6 +60,7 @@ class _MapPageState extends State<MapPage> {
                 top: screenHeight / 8,
                 left: 10,
                 child: FloatingActionButton(
+                  heroTag: "btn1",
                   elevation: 0.0,
                   onPressed: () {},
                   child: Icon(
@@ -73,6 +74,7 @@ class _MapPageState extends State<MapPage> {
                 top: screenHeight / 4.6,
                 left: 10,
                 child: FloatingActionButton(
+                  heroTag: "btn2",
                   elevation: 0.0,
                   onPressed: () {},
                   child: Icon(
@@ -86,6 +88,7 @@ class _MapPageState extends State<MapPage> {
                 top: screenHeight / 3,
                 left: 10,
                 child: FloatingActionButton(
+                  heroTag: "btn3",
                   elevation: 0.0,
                   onPressed: () {},
                   child: Icon(
@@ -234,6 +237,7 @@ class _MapPageState extends State<MapPage> {
       floatingActionButton: Visibility(
         visible: !showBottomWidget,
         child: FloatingActionButton(
+          heroTag: "btn4",
           onPressed: () {
             setState(() {
               showBottomWidget = true;

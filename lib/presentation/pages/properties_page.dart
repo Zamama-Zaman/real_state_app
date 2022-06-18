@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:real_state_app/constants.dart';
 import 'package:real_state_app/presentation/pages/favorited_page.dart';
 import 'package:real_state_app/presentation/pages/news_page.dart';
 import 'package:real_state_app/presentation/pages/popular_page.dart';
+import 'package:real_state_app/presentation/widgets/drawer_widget.dart';
 
 class PropertiesPage extends StatefulWidget {
   const PropertiesPage({Key? key}) : super(key: key);
@@ -37,6 +39,7 @@ class _PropertiesPageState extends State<PropertiesPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: drawerWidget(context),
       appBar: AppBar(
         title: Text("Properties"),
         bottom: TabBar(
@@ -46,10 +49,8 @@ class _PropertiesPageState extends State<PropertiesPage>
           },
           controller: _controller,
           tabs: list,
-        ),
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu),
+          labelColor: Constant.kGreenColor,
+          indicatorColor: Constant.kGreenColor,
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),

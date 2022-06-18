@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_state_app/presentation/pages/feed_page.dart';
 import 'package:real_state_app/presentation/pages/notification_page.dart';
+import 'package:real_state_app/presentation/widgets/drawer_widget.dart';
 
 import '../../constants.dart';
 
@@ -37,6 +38,7 @@ class _ActivityPageState extends State<ActivityPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: drawerWidget(context),
       appBar: AppBar(
         backgroundColor: black,
         title: Text("Activity"),
@@ -44,11 +46,8 @@ class _ActivityPageState extends State<ActivityPage>
           onTap: (index) {},
           controller: _controller,
           tabs: list,
-          indicatorColor: Colors.white,
-        ),
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu),
+          indicatorColor: Constant.kGreenColor,
+          labelColor: Constant.kGreenColor,
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),

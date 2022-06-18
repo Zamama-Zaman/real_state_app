@@ -116,303 +116,318 @@ class _OverviewPageState extends State<OverviewPage> {
               ),
             ),
             SizedBox(height: 10),
-            Card(
-              color: Colors.lightBlue.shade50,
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                height: 50,
-                width: double.infinity,
-                color: Colors.transparent,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            "assets/images/funds.png",
-                            width: 25,
-                            height: 25,
-                          ),
-                          Container(
-                            height: 50,
-                            width: 90,
-                            color: Colors.transparent,
-                            padding: EdgeInsets.symmetric(horizontal: 5),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  "67%",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                Text(
-                                  "FUNDED",
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            "assets/images/investors.png",
-                            width: 25,
-                            height: 25,
-                          ),
-                          Container(
-                            height: 50,
-                            width: 90,
-                            color: Colors.transparent,
-                            padding: EdgeInsets.symmetric(horizontal: 5),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  "65",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                Text(
-                                  "INVESTORS",
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Image.asset(
-                            "assets/images/time.png",
-                            width: 25,
-                            height: 25,
-                          ),
-                          Container(
-                            height: 50,
-                            width: 90,
-                            color: Colors.transparent,
-                            padding: EdgeInsets.symmetric(horizontal: 5),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  "3",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                Text(
-                                  "DAYS TO GO",
-                                  style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            Card(
-              color: Colors.lightBlue.shade50,
-              child: Column(
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              height: 50,
+              width: double.infinity,
+              color: Colors.transparent,
+              child: Row(
                 children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    margin: EdgeInsets.symmetric(horizontal: 20),
-                    height: 70,
-                    width: double.infinity,
-                    color: Colors.transparent,
+                  Expanded(
                     child: Row(
                       children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 20),
-                            CircularPercentIndicator(
-                              radius: 45.0,
-                              lineWidth: 5.0,
-                              percent: 0.75,
-                              center: Text("75%"),
-                              progressColor: Constant.kGreenColor,
-                            ),
-                            SizedBox(width: 5),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Delivery Rate",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                                SizedBox(height: 3),
-                                Text(
-                                  "75%",
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                    color: Constant.kGreenColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                        Image.asset(
+                          "assets/images/funds.png",
+                          width: 25,
+                          height: 25,
                         ),
-                        SizedBox(width: 50),
-                        Row(
-                          children: [
-                            SizedBox(width: 20),
-                            CircularPercentIndicator(
-                              radius: 45.0,
-                              lineWidth: 5.0,
-                              percent: 0.50,
-                              center: Text("50%"),
-                              progressColor: Constant.kGreenColor,
-                            ),
-                            SizedBox(width: 5),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Total Projects",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
+                        Container(
+                          height: 50,
+                          width: 90,
+                          color: Colors.transparent,
+                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 5),
+                              Text(
+                                "67%",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 16,
                                 ),
-                                SizedBox(height: 3),
-                                Text(
-                                  "50%",
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                    color: Constant.kGreenColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                              ),
+                              Text(
+                                "FUNDED",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12,
                                 ),
-                              ],
-                            ),
-                            SizedBox(width: 20),
-                          ],
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    margin: EdgeInsets.symmetric(horizontal: 20),
-                    height: 70,
-                    width: double.infinity,
-                    color: Colors.transparent,
+                  Expanded(
                     child: Row(
                       children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 20),
-                            CircularPercentIndicator(
-                              radius: 45.0,
-                              lineWidth: 5.0,
-                              percent: 0.89,
-                              center: Text("89%"),
-                              progressColor: Constant.kGreenColor,
-                            ),
-                            SizedBox(width: 5),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Linear Conductor",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                                SizedBox(height: 3),
-                                Text(
-                                  "89%",
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                    color: Constant.kGreenColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                        Image.asset(
+                          "assets/images/investors.png",
+                          width: 25,
+                          height: 25,
                         ),
-                        SizedBox(width: 30),
-                        Row(
-                          children: [
-                            SizedBox(width: 20),
-                            CircularPercentIndicator(
-                              radius: 45.0,
-                              lineWidth: 5.0,
-                              percent: 0.80,
-                              center: Text("80%"),
-                              progressColor: Constant.kGreenColor,
-                            ),
-                            SizedBox(width: 5),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Linear Conduct",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.grey,
-                                  ),
+                        Container(
+                          height: 50,
+                          width: 90,
+                          color: Colors.transparent,
+                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 5),
+                              Text(
+                                "65",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 16,
                                 ),
-                                SizedBox(height: 3),
-                                Text(
-                                  "80%",
-                                  style: TextStyle(
-                                    fontSize: 22,
-                                    color: Constant.kGreenColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                              ),
+                              Text(
+                                "INVESTORS",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12,
                                 ),
-                              ],
-                            ),
-                            SizedBox(width: 20),
-                          ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          "assets/images/time.png",
+                          width: 25,
+                          height: 25,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 90,
+                          color: Colors.transparent,
+                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 5),
+                              Text(
+                                "3",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              Text(
+                                "DAYS TO GO",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
                   ),
                 ],
               ),
+            ),
+            SizedBox(height: 20),
+            Column(
+              children: [
+                Container(
+                  height: 70,
+                  width: double.infinity,
+                  color: Colors.transparent,
+                  child: Row(
+                    children: [
+                      SizedBox(width: 20),
+                      Card(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 5),
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          child: Row(
+                            children: [
+                              // SizedBox(width: 10),
+                              CircularPercentIndicator(
+                                radius: 45.0,
+                                lineWidth: 5.0,
+                                percent: 0.75,
+                                center: Text("75%"),
+                                progressColor: Constant.kGreenColor,
+                              ),
+                              SizedBox(width: 5),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Delivery Rate",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    "75%",
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      color: Constant.kGreenColor,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(width: 20),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 30),
+                      Card(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 5),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 20),
+                              CircularPercentIndicator(
+                                radius: 45.0,
+                                lineWidth: 5.0,
+                                percent: 0.50,
+                                center: Text("50%"),
+                                progressColor: Constant.kGreenColor,
+                              ),
+                              SizedBox(width: 5),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Total Projects",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    "50%",
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      color: Constant.kGreenColor,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(width: 20),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 70,
+                  width: double.infinity,
+                  color: Colors.transparent,
+                  child: Row(
+                    children: [
+                      SizedBox(width: 20),
+                      Card(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 5),
+                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          child: Row(
+                            children: [
+                              // SizedBox(width: 0),
+                              CircularPercentIndicator(
+                                radius: 45.0,
+                                lineWidth: 5.0,
+                                percent: 0.89,
+                                center: Text("89%"),
+                                progressColor: Constant.kGreenColor,
+                              ),
+                              SizedBox(width: 5),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Linear Conductor",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    "89%",
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      color: Constant.kGreenColor,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 27),
+                      Card(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 5),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 20),
+                              CircularPercentIndicator(
+                                radius: 45.0,
+                                lineWidth: 5.0,
+                                percent: 0.80,
+                                center: Text("80%"),
+                                progressColor: Constant.kGreenColor,
+                              ),
+                              SizedBox(width: 5),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Linear Conduct",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    "80%",
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      color: Constant.kGreenColor,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(width: 15),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 20),
             Container(
@@ -744,7 +759,7 @@ class _OverviewPageState extends State<OverviewPage> {
             ),
             SizedBox(height: 20),
             Card(
-              color: Colors.lightBlue.shade50,
+              // color: Colors.lightBlue.shade50,
               child: Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: 5,

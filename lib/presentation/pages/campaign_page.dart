@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:real_state_app/constants.dart';
 import 'package:real_state_app/presentation/pages/overview_page.dart';
 import 'package:real_state_app/presentation/pages/project_page.dart';
 import 'package:real_state_app/presentation/pages/update_page.dart';
@@ -40,7 +41,9 @@ class _CompaignPageState extends State<CompaignPage>
     return Scaffold(
       drawer: drawerWidget(context),
       appBar: AppBar(
-        title: Text("Compaign"),
+        title: Text(
+          "Compaign",
+        ),
         bottom: TabBar(
           onTap: (index) {
             // Should not used it as it only called when tab options are clicked,
@@ -48,7 +51,8 @@ class _CompaignPageState extends State<CompaignPage>
           },
           controller: _controller,
           tabs: list,
-          indicatorColor: Colors.white,
+          indicatorColor: Constant.kGreenColor,
+          labelColor: Constant.kGreenColor,
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
