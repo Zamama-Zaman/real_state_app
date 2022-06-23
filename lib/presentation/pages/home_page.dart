@@ -31,7 +31,24 @@ class _HomePageState extends State<HomePage>
   }
 
   List<Widget> list = [
-    Tab(text: "WHAT'S NEW"),
+    Tab(
+      text: "WHAT'S NEW",
+      icon: Icon(Icons.home),
+      // child: Row(
+      //   children: [
+      //     // Icon(
+      //     //   Icons.home,
+      //     //   size: 20,
+      //     // ),
+      //     Text(
+      //       " WHAT'S NEW",
+      //       style: TextStyle(
+      //         fontSize: 13,
+      //       ),
+      //     ),
+      //   ],
+      // ),
+    ),
     Tab(text: "POPULAR"),
     Tab(text: "ENDING SOON"),
   ];

@@ -310,7 +310,7 @@ Widget menuItem(context, int id, String title, IconData icon, bool selected,
           Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => CompaignPage(),
+                builder: (context) => CompaignPage(index: 0),
               ),
               (route) => false);
         } else if (id == 3) {
