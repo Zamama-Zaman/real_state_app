@@ -1463,6 +1463,8 @@ class _OverviewPageState extends State<OverviewPage> {
             ),
             // SizedBox(height: 10),
             Card(
+              margin: EdgeInsets.zero,
+              elevation: 2.0,
               child: Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: 30,
@@ -1490,7 +1492,7 @@ class _OverviewPageState extends State<OverviewPage> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            // SizedBox(height: 10),
             Container(
               width: double.infinity,
               height: 50,
