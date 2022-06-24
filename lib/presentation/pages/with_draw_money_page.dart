@@ -50,6 +50,18 @@ class WithDarwMoneyPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                "With Draw Money to Bank Account:".toUpperCase(),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
             Card(
               child: Container(
                 height: 120,

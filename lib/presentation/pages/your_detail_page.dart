@@ -27,88 +27,93 @@ class _YourDetailPageState extends State<YourDetailPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 10),
-            Container(
-              height: 120,
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              color: Colors.transparent,
-              child: Row(
+            Card(
+              child: Column(
                 children: [
+                  SizedBox(height: 10),
                   Container(
-                    height: 90,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(height: 15),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.location_on,
-                            color: Colors.grey,
-                            size: 16,
+                    height: 120,
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    color: Colors.transparent,
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 90,
+                          width: 90,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            borderRadius: BorderRadius.circular(50),
                           ),
-                          SizedBox(width: 3),
-                          Text(
-                            "Mexico",
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.red,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        "Cancun Vacation Break",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16,
                         ),
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.timelapse_sharp,
-                            color: Colors.grey,
-                            size: 16,
-                          ),
-                          SizedBox(width: 3),
-                          Text(
-                            "3 days",
-                            style: TextStyle(
-                              fontSize: 12,
+                        SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 15),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.location_on,
+                                  color: Colors.grey,
+                                  size: 16,
+                                ),
+                                SizedBox(width: 3),
+                                Text(
+                                  "Mexico",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                          SizedBox(width: 40),
-                          Icon(
-                            Icons.account_box_sharp,
-                            color: Colors.grey,
-                            size: 16,
-                          ),
-                          SizedBox(width: 3),
-                          Text(
-                            "10 people",
-                            style: TextStyle(
-                              fontSize: 12,
+                            SizedBox(height: 5),
+                            Text(
+                              "Cancun Vacation Break",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                            SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.timelapse_sharp,
+                                  color: Colors.grey,
+                                  size: 16,
+                                ),
+                                SizedBox(width: 3),
+                                Text(
+                                  "3 days",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                  ),
+                                ),
+                                SizedBox(width: 40),
+                                Icon(
+                                  Icons.account_box_sharp,
+                                  color: Colors.grey,
+                                  size: 16,
+                                ),
+                                SizedBox(width: 3),
+                                Text(
+                                  "10 people",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-            Divider(),
             Container(
               height: 165,
               width: double.infinity,

@@ -22,6 +22,7 @@ class MyWalletPage extends StatelessWidget {
             children: [
               SizedBox(height: 10),
               Card(
+                margin: EdgeInsets.zero,
                 child: Container(
                   height: 150,
                   width: double.infinity,
@@ -58,6 +59,18 @@ class MyWalletPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  "Latest Transactions".toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
               Row(
                 children: [
                   Expanded(
@@ -127,6 +140,18 @@ class MyWalletPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 40),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  "Bank Account".toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
               Card(
                 child: Container(
                   height: 120,
@@ -190,6 +215,18 @@ class MyWalletPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  "TransactionHistory".toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
               Card(
                 // color: Colors.lightBlue.shade50,
                 child: Container(

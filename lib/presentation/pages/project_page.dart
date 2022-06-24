@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:real_state_app/presentation/pages/gallery_page.dart';
 import 'package:real_state_app/presentation/pages/map_page.dart';
+import 'package:real_state_app/presentation/pages/notification_page.dart';
 
 import '../../constants.dart';
 
@@ -15,18 +16,27 @@ class IconText {
 }
 
 List<IconText> iconText = [
-  IconText(icon: Icons.pin_drop, name: "DETAILS"),
+  IconText(icon: Icons.square_foot_sharp, name: "DETAILS"),
   IconText(icon: Icons.person_outline, name: "OWNER"),
-  IconText(icon: Icons.comment, name: "COMMENTS"),
+  IconText(icon: Icons.av_timer_outlined, name: "ACTIVITY"),
 ];
 
 List<Widget> showWidget = [
   DetailsWidget(),
   OwnerWidget(),
-  Center(
-    child: Text("Comments"),
-  ),
+  ActivityWidget(),
 ];
+
+class ActivityWidget extends StatelessWidget {
+  const ActivityWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return NotificationBodyWidget();
+  }
+}
 
 class ProjectPage extends StatefulWidget {
   const ProjectPage({Key? key}) : super(key: key);
@@ -1255,11 +1265,21 @@ class DetailsWidget extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              Text(
-                "VIEW ALL",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Constant.kGreenColor,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MapPage(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "VIEW ALL",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Constant.kGreenColor,
+                  ),
                 ),
               ),
             ],
@@ -1275,35 +1295,37 @@ class DetailsWidget extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               shrinkWrap: true,
               itemCount: 2,
-              itemBuilder: (context, index) => Container(
+              itemBuilder: (context, index) => Card(
                 margin: EdgeInsets.only(left: 10),
-                width: 180,
-                color: Colors.white,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 170,
-                      width: double.infinity,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(height: 5),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Text("Product Name"),
-                    ),
-                    SizedBox(height: 5),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Text(
-                        "\$255",
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Constant.kGreenColor,
+                child: Container(
+                  width: 180,
+                  color: Colors.white,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 170,
+                        width: double.infinity,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(height: 5),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Text("Product Name"),
+                      ),
+                      SizedBox(height: 5),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Text(
+                          "\$255",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Constant.kGreenColor,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -1316,7 +1338,7 @@ class DetailsWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "LAYOUT",
+                "PLAN",
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 16,

@@ -38,101 +38,130 @@ class _MyProfilePageState extends State<MyProfilePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.mail_sharp),
-                SizedBox(width: 50),
-                Container(
-                  height: 75,
-                  width: 75,
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(50),
+            Card(
+              margin: EdgeInsets.zero,
+              elevation: 0.0,
+              child: Column(
+                children: [
+                  SizedBox(height: 50),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.mail_sharp),
+                      SizedBox(width: 50),
+                      Container(
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
+                      SizedBox(width: 50),
+                      Icon(Icons.settings),
+                    ],
                   ),
-                ),
-                SizedBox(width: 50),
-                Icon(Icons.settings),
-              ],
-            ),
-            SizedBox(height: 20),
-            Text(
-              "Michael Angelo",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w300,
+                  SizedBox(height: 20),
+                  Text(
+                    "Michael Angelo",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.grey,
+                        size: 16,
+                      ),
+                      SizedBox(width: 5),
+                      Text(
+                        "San Fransisco, CA",
+                        style: TextStyle(
+                          fontSize: 13,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                ],
               ),
             ),
-            SizedBox(height: 5),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.location_on,
-                  color: Colors.grey,
-                  size: 16,
-                ),
-                SizedBox(width: 5),
-                Text(
-                  "San Fransisco, CA",
-                  style: TextStyle(
-                    fontSize: 13,
+            Card(
+              elevation: 0.0,
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  Container(
+                    height: 70,
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    color: Colors.transparent,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: twoText.length,
+                      itemBuilder: (context, index) => InkWell(
+                        onTap: () {
+                          setState(() {
+                            item = index;
+                          });
+                        },
+                        child: Container(
+                          height: 70,
+                          width: 124,
+                          color: Colors.transparent,
+                          child: Column(
+                            children: [
+                              SizedBox(height: 5),
+                              Text(
+                                twoText[index].number,
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              Text(
+                                twoText[index].name,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                ),
+                              ),
+                              Expanded(child: SizedBox()),
+                              // item == index
+                              //     ? Container(
+                              //         height: 3,
+                              //         width: double.infinity,
+                              //         color: Constant.kGreenColor,
+                              //       )
+                              //     : SizedBox(),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ],
+                  // SizedBox(height: 10),
+                ],
+              ),
             ),
             SizedBox(height: 20),
             Container(
-              height: 70,
-              margin: EdgeInsets.symmetric(horizontal: 20),
-              color: Colors.transparent,
-              child: ListView.builder(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: twoText.length,
-                itemBuilder: (context, index) => InkWell(
-                  onTap: () {
-                    setState(() {
-                      item = index;
-                    });
-                  },
-                  child: Container(
-                    height: 70,
-                    width: 124,
-                    color: Colors.transparent,
-                    child: Column(
-                      children: [
-                        SizedBox(height: 5),
-                        Text(
-                          twoText[index].number,
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        Text(
-                          twoText[index].name,
-                          style: TextStyle(
-                            fontSize: 14,
-                          ),
-                        ),
-                        Expanded(child: SizedBox()),
-                        // item == index
-                        //     ? Container(
-                        //         height: 3,
-                        //         width: double.infinity,
-                        //         color: Constant.kGreenColor,
-                        //       )
-                        //     : SizedBox(),
-                      ],
-                    ),
-                  ),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                "Bank Account".toUpperCase(),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ),
             SizedBox(height: 10),
-            SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
@@ -201,6 +230,18 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     ),
                   ),
                   SizedBox(height: 20),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      "Credit Cards".toUpperCase(),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
                   Card(
                     child: Container(
                       height: 120,
@@ -264,6 +305,18 @@ class _MyProfilePageState extends State<MyProfilePage> {
                     ),
                   ),
                   SizedBox(height: 20),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      "Last Transactions".toUpperCase(),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
                   Card(
                     child: Container(
                       padding:

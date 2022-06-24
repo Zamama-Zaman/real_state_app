@@ -22,61 +22,66 @@ class TransactionSuccessfullPage extends StatelessWidget {
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.check_circle_outline_outlined,
-                color: Constant.kGreenColor,
-                size: 200,
-              ),
-              SizedBox(height: 10),
-              Text(
-                "Money Transfer is\n Successfull",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 45,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
-              SizedBox(height: 20),
               Card(
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                  height: 70,
-                  width: double.infinity,
-                  color: Colors.transparent,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.check_circle_outline_outlined,
+                      color: Constant.kGreenColor,
+                      size: 200,
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Money Transfer is\n Successfull",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 45,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                      height: 70,
+                      width: double.infinity,
+                      color: Colors.transparent,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "Recipient's Name",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Recipient's Name",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              Text(
+                                "-\$345,00",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
                           ),
+                          SizedBox(height: 10),
                           Text(
-                            "-\$345,00",
+                            "Today at 12:00 PM",
                             style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              color: Colors.grey,
+                              fontSize: 13,
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
-                      Text(
-                        "Today at 12:00 PM",
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 13,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               Spacer(),
