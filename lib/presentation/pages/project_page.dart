@@ -127,6 +127,8 @@ class _ProjectPageState extends State<ProjectPage> {
                     child: SliderTheme(
                       data: SliderTheme.of(context).copyWith(
                         trackHeight: 2,
+                        activeTrackColor: Constant.kGreenColor,
+                        thumbColor: Constant.kGreenColor,
                         thumbShape:
                             RoundSliderThumbShape(enabledThumbRadius: 2.0),
                         overlayShape:

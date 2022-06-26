@@ -114,6 +114,8 @@ class _OverviewPageState extends State<OverviewPage> {
                     child: SliderTheme(
                       data: SliderTheme.of(context).copyWith(
                         trackHeight: 2,
+                        activeTrackColor: Constant.kGreenColor,
+                        thumbColor: Constant.kGreenColor,
                         thumbShape:
                             RoundSliderThumbShape(enabledThumbRadius: 2.0),
                         overlayShape:
@@ -1305,6 +1307,7 @@ class _OverviewPageState extends State<OverviewPage> {
                   ),
                   Switch(
                       value: yesNoSwitch,
+                      activeColor: Constant.kGreenColor,
                       onChanged: (val) {
                         setState(() {
                           yesNoSwitch = val;

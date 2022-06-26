@@ -83,6 +83,7 @@ class _WalletPageState extends State<WalletPage> {
                 ],
               ),
             ),
+            SizedBox(height: 20),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               margin: EdgeInsets.symmetric(horizontal: 10),

@@ -5,8 +5,8 @@ import 'package:real_state_app/presentation/pages/campaign_page.dart';
 
 import '../../constants.dart';
 
-class EndingSoon extends StatelessWidget {
-  const EndingSoon({Key? key}) : super(key: key);
+class HomeIconPage extends StatelessWidget {
+  const HomeIconPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
